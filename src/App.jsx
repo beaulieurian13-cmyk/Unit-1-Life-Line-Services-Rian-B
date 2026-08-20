@@ -1,12 +1,16 @@
 import { useState } from 'react'
+
 import './App.css'
+import Header from './assets/componet/layout/header'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
-     Hello LaunchCode
+     <Header />
+     
     </>
   )
 }
