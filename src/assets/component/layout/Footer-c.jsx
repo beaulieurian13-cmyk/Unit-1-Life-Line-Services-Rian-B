@@ -2,14 +2,14 @@ const Footer = () => {
 
     return (
         <footer>
-            {/* <div className="footer-content"> */}
+           <div className="Footer"> 
                 <h1>Contact Us</h1>
                  <p>Phone: 618-920-1742
                     Email: lifelineservices@gmail.com
                  </p>
               
                  <p>&copy; 2023 Life Line Services. All rights reserved.</p>
-            {/* </div> */}
+            </div> 
             
         </footer> 
            )

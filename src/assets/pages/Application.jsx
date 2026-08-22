@@ -2,9 +2,9 @@
 //import ServiceDogReadiness from '../component/application/ServiceDogReadiness.jsx'
 //import SupportNetwork from '../component/application/SupportNetwork'
 //import Therapist from '../component/application/TherapistInfo'
+import { Link } from "react-router"
 
-
-const Application = ({setCurrentPage}) => {
+const Application = () => {
     return (
         <div className="ApplicationPage">
             <h1>Application</h1>

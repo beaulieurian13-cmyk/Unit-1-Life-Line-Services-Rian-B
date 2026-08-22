@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react"
 import { Link } from "react-router"
 
-const HomePage =({setCurrentPage}) => {
+const HomePage =() => {
     return (
         <div className="HomePage">
         <h1>Our Story</h1>

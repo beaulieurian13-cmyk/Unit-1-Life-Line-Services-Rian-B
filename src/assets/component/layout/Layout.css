@@ -1,4 +1,12 @@
-nav-menu {
+    nav-menu {
     color: blue;
 
 }
+
+Header, Footer {
+    background-color: #e7750a;
+    padding: 20px;
+    text-align: center;
+}
+            
+    
