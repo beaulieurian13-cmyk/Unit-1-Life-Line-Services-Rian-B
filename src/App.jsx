@@ -4,7 +4,7 @@ import Footer from './assets/component/layout/Footer-c.jsx'
 import HomePage from './assets/pages/Home.jsx'
 import AboutPage from './assets/pages/About.jsx'
 import Application from './assets/pages/Application.jsx'
-import { Routes, Route, Navigate } from 'react-router'
+import { Routes, Route, Navigate, NavLink } from 'react-router'
 import './App.css'
 
 
@@ -26,6 +26,8 @@ function App() {
      <Footer />
      
     </>
+  
+
   )
 }
 

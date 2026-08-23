@@ -1,8 +1,10 @@
-const Application = () => {
+const ApplicantInfo = () => {
     return (
-        <div className="ApplicationPage">
-            <h1>Application</h1>
-            <ApplicantInfo />
+        <div className="ApplicantPage">
+            <h1>Applicant Information</h1>
+            <p>Please fill out the following information:</p>
         </div>
     )
 }
+
+export default ApplicantInfo

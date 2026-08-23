@@ -1,3 +1,5 @@
+import './Layout-c.css';
+
 const Footer = () => {
 
     return (

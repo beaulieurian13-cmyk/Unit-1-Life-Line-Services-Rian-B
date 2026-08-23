@@ -1,4 +1,5 @@
-import NavMenu from "./NavMenu";
+import NavMenu from "./NavLink/NavMenu";
+import './Layout-c.css';
 
 const Header = () => {
      return (
