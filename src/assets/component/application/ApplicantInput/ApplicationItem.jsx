@@ -1,4 +1,4 @@
-const ApplicantItem = (classes, children) => {
+const ApplicantItem = ({classes, children}) => {
     return (
         <div className={`applicant-item ${classes}`}>
             {children}
