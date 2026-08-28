@@ -1,12 +1,16 @@
-import ApplicantInfo from '../component/application/ApplicantInfo.jsx';
+import ApplicantInfo from '../component/application/pages/ApplicantInfo.jsx';
 import Button from '../component/application/ApplicantInput/FormButton.jsx';
 //import application from "../component/application.css"
-import ServiceDogReadiness from '../component/application/ServiceDogReadiness.jsx'
-import SupportNetwork from '../component/application/SupportNetwork'
-import TherapistInfo from '../component/application/TherapistInfo';
+import ServiceDogReadiness from '../component/application/pages/ServiceDogReadiness.jsx'
+import SupportNetwork from '../component/application/pages/SupportNetwork.jsx'
+import TherapistInfo from '../component/application/pages/TherapistInfo.jsx';
 import { useState } from "react";
+//TODO: Update blankFormData with ServiceDogReadiness Input IDs 
+//TODO: Update blankFormData with supportNetwork Input IDs 
+//TODO: Update blankFormData with theripistinfo Input IDs 
 
 const blankFormData = { 
+    //applicantinfo
        firstName: '', 
        lastName: '',
        preferredName:'',
@@ -19,14 +23,27 @@ const blankFormData = {
        city: "",
        state: "",
        zipCode: "",
+    //serviceDogReadiness
+       ownedDog: "",
+       dailyCare: "",
+       participateTraining: "",
+       commitment: "",
+       understandingCommitment: "",
+       homeCommitment: "",
+       dogCare: "", 
+       householdSupport: "",
+       rulefollowing: "",
+       biggestChallenge: "",
+       succeccfulSupport: "",
+       receiveReady: "",
 
-       livingSituation: "",
-       stableHousing: "",
-
-       hasSupportNetwork: false,
-       emergencyContactName: "",
-   
-       hasTherapist: false,
+    //supportNetwork
+       liveWith: "",
+       stableLiving: "",
+       emergencyName: "",
+       emergencyPhone:"",
+   //theripistinfo
+       hasTherapist: "",
        therapistName: "",
        therapistPhone: "",
 };
@@ -37,33 +54,39 @@ const Application = () => {
 
     const [formData, setFormData] = useState({...blankFormData});
       
-    const[hasError, setHasError] = useState(false);
-
-    const isValid = () => {
-        return Object.keys(blankFormData).every((field) => {
-          const value = formData[field];
-          return typeof value === "string" ? value.trim() !== "" : true;
-    });  
-    }
+    //const[hasError, setHasError] = useState(false);
+    //TODO:finsih error set up
+//TODO:fix isvalid by adding array for each page
+    // const isValid = () => {
+    //     return Object.keys(blankFormData).every((field) => {
+    //       const value = formData[field];
+    //       return typeof value === "string" ? value.trim() !== "" : true;
+    // });  
+    // }
             
     const handleChange = (event) => {
-        const { id, value } = event.target
+        const { id, name, value } = event.target;
+        const key = name || id;
         setFormData(prevFormData => ({
             ...prevFormData,
-             [id]: value,
+             [key]: value,
              })
             );
 
     };
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+     }
+
     const isLastStep = currentStep === 3;
 
     return (
 
-        <div className="ApplicationPage">
+        <main className="ApplicationPage">
             <h2>Application</h2>
-          
-            {currentStep === 0 &&<ApplicantInfo 
+          <form>
+             {currentStep === 0 &&<ApplicantInfo 
             setCurrentStep={setCurrentStep}
             formData={formData}
             handleChange={handleChange}
@@ -82,21 +105,31 @@ const Application = () => {
             />}
             <div className="button-container">
                 {currentStep > 0 && (
-                    <Button label="Back" handleClick={() => 
+                    <Button 
+                    label="Back"
+                    type="button" 
+                    handleClick={() => 
                         setCurrentStep(currentStep - 1)} />
             )}
 
             {isLastStep ? (
-                    <Button label="Submit" type="submit" 
+                    <Button 
+                    label="Submit" 
+                    type="submit" 
                     handleClick={handleSubmit} />
             ) : (
-                    <Button label="Next" handleClick={() => 
+                    <Button  
+                    label="Next"
+                    type="button"
+                    handleClick={() => 
                         setCurrentStep(currentStep + 1)} />
             )}
             </div>
+          </form>
+           
+        </main>
           
-        </div>
-    );
+            );
 };
 
-export default Application
+export default Application;

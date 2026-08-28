@@ -1,5 +1,3 @@
-import layoout from './assets/component/layout/Layout.css'
-
-HomePage {
-    color:blueviolet
+import layoout from "./assets/component/layout/Layout.css" HomePage {
+  color: blueviolet;
 }

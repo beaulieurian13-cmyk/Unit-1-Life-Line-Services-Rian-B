@@ -1,12 +1,14 @@
 const Button = ({ id, type, label, classes, handleClick }) => {
-    return (
-        <button id={`${id}-button`} 
-        type={type} 
-        className={classes} 
-        onClick={handleClick}>
-            {label}
-        </button>
-    );
+  return (
+    <button
+      id={`${id}-button`}
+      type={type}
+      className={classes}
+      onClick={handleClick}
+    >
+      {label}
+    </button>
+  );
 };
 
 export default Button;

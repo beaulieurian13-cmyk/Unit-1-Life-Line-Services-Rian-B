@@ -1,4 +1,4 @@
-//         {/* <section className="about-values">  */}
+/         {/* <section className="about-values">  */}
 //                 {/* <form>
 //                     <ul>
 //                     <li>
