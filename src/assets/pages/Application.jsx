@@ -54,7 +54,7 @@ const Application = () => {
 
     const [formData, setFormData] = useState({...blankFormData});
       
-    //const[hasError, setHasError] = useState(false);
+    const[hasError, setHasError] = useState(false);
     //TODO:finsih error set up
 //TODO:fix isvalid by adding array for each page
     // const isValid = () => {
@@ -63,7 +63,7 @@ const Application = () => {
     //       return typeof value === "string" ? value.trim() !== "" : true;
     // });  
     // }
-            
+    //TODO:        
     const handleChange = (event) => {
         const { id, name, value } = event.target;
         const key = name || id;
@@ -75,8 +75,12 @@ const Application = () => {
 
     };
 
+
+    
+
     const handleSubmit = (event) => {
         event.preventDefault();
+        setFormData(blankFormData);
      }
 
     const isLastStep = currentStep === 3;
@@ -85,7 +89,7 @@ const Application = () => {
 
         <main className="ApplicationPage">
             <h2>Application</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
              {currentStep === 0 &&<ApplicantInfo 
             setCurrentStep={setCurrentStep}
             formData={formData}
@@ -109,7 +113,7 @@ const Application = () => {
                     label="Back"
                     type="button" 
                     handleClick={() => 
-                        setCurrentStep(currentStep - 1)} />
+                        setCurrentStep(currentStep -  1)} />
             )}
 
             {isLastStep ? (

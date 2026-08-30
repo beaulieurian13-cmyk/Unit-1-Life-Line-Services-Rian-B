@@ -98,10 +98,10 @@ const ServiceDogReadiness = ({ formData, handleChange }) => {
           <br></br>
           <TextArea
             id="receiveReady"
-            label="What do you think will be the biggest challenge for you when caring for and working with a service dog?"
+            label="Why do you feel you are ready to receive a service dog at this point in your journey?"
             value={formData.receiveReady}
             handleChange={handleChange}
-          />{" "}
+          />
           <br></br>
         </div>
       </fieldset>

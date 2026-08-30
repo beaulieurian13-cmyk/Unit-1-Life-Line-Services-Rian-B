@@ -1,5 +1,6 @@
 import Input from "../ApplicantInput/Input";
 import Radio from "../ApplicantInput/Radio";
+import UploadFile from "../ApplicantInput/UploadFile";
 
 
 const TherapistInfo = ({formData, handleChange}) => {
@@ -31,9 +32,13 @@ const TherapistInfo = ({formData, handleChange}) => {
     value={formData.therapistPhone}
     handleChange={handleChange}
     />
-
-    </fieldset>   
+  
+    </fieldset> 
+    <UploadFile handleChange={handleChange} />
  </div>
+
+ 
+
   );
 };
 
