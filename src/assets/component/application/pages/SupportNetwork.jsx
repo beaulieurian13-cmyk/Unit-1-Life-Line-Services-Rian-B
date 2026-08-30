@@ -1,13 +1,13 @@
-import Input from "../ApplicantInput/Input";
-import Radio from "../ApplicantInput/Radio";
+import Input from "../ApplicantInput/type/Input";
+import Radio from "../ApplicantInput/type/Radio";
 
 
 const SupportNetwork = ({formData, handleChange}) => {
     return (
         <div className="SupportNetworkPage">
-            <h1>Support Network</h1>
-            <p>Please provide information about your support network:</p>
-        <fieldset>
+            <h2>Support Network</h2>
+            <h3>Please provide information about your support network:</h3>
+        <fieldset >
             <Radio
              id="liveWith"
              name="liveWith"

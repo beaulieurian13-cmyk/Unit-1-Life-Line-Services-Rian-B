@@ -1,5 +1,5 @@
-import Radio from "../ApplicantInput/Radio";
-import TextArea from "../ApplicantInput/TextArea";
+import Radio from "../ApplicantInput/type/Radio";
+import TextArea from "../ApplicantInput/type/TextArea";
 
 const ServiceDogReadiness = ({ formData, handleChange }) => {
   return (
@@ -81,6 +81,11 @@ const ServiceDogReadiness = ({ formData, handleChange }) => {
             value={formData.rulefollowing}
             handleChange={handleChange}
           />
+          </div>
+        </fieldset>
+
+        <fieldset className="text-area">
+
           <h3>Short Answer Questions</h3>
           <TextArea
             id="biggestChallenge"
@@ -102,8 +107,7 @@ const ServiceDogReadiness = ({ formData, handleChange }) => {
             value={formData.receiveReady}
             handleChange={handleChange}
           />
-          <br></br>
-        </div>
+          <br></br>        
       </fieldset>
     </div>
   );

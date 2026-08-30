@@ -8,7 +8,7 @@ const UploadFile = ({handleChange}) => {
     const handleFileChange = (event) => {
         handleChange(event);
         setFileUpload(true);
-           console.log("fileUploaded is now:", true); 
+           
     };
          
     

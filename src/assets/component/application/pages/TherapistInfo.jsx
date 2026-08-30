@@ -1,15 +1,15 @@
-import Input from "../ApplicantInput/Input";
-import Radio from "../ApplicantInput/Radio";
+import Input from "../ApplicantInput/type/Input";
+import Radio from "../ApplicantInput/type/Radio";
 import UploadFile from "../ApplicantInput/UploadFile";
 
 
 const TherapistInfo = ({formData, handleChange}) => {
   return (
     <div className="TherapistInfoPage">
-      <h1>Therapist Information</h1>
+      <h2>Therapist Information</h2>
       <p>Please provide information about your therapist:</p>
    
-    <fieldset>
+    <fieldset className="radio-group">
     <Radio
     id="hasTherapist"
     name="hasTherapist"
@@ -17,7 +17,10 @@ const TherapistInfo = ({formData, handleChange}) => {
     options={["Yes","No"]}
     value={formData.hasTherapist}
     handleChange={handleChange}
-    />
+    /> 
+    </fieldset>
+    <fieldset>
+  
     <Input
     id="therapistName"
     label="Therapist Name"
@@ -34,7 +37,8 @@ const TherapistInfo = ({formData, handleChange}) => {
     />
   
     </fieldset> 
-    <UploadFile handleChange={handleChange} />
+    <UploadFile 
+    handleChange={handleChange} />
  </div>
 
  

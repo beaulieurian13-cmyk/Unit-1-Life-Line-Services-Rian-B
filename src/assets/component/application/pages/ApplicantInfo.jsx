@@ -1,13 +1,16 @@
-import ApplicantItem from "../ApplicantInput/ApplicationItem";
-import Input from "../ApplicantInput/Input";
+import FormSection from "../ApplicantInput/styling/FormSection";
 
-const ApplicantInfo = ({ formData, handleChange, setCurrentStep }) => {
+import Input from "../ApplicantInput/type/Input";
+
+const ApplicantInfo = ({ formData, handleChange, }) => {
   return (
-    <div className="applicant-info">
-      <h2>Applicant Information</h2>
-      <p>Please fill out the following information:</p>
-      <fieldset>
-        <ApplicantItem classes="first-name-item">
+    <div>
+       <h2>Applicant Information</h2>
+      
+      <FormSection
+        title= "Please fill out the following information:"
+        classes="input"> 
+      
           <Input
             id="firstName"
             label="First Name"
@@ -80,9 +83,9 @@ const ApplicantInfo = ({ formData, handleChange, setCurrentStep }) => {
             required={true}
             handleChange={handleChange}
           />
-        </ApplicantItem>
-      </fieldset>
-    </div>
+        </FormSection>
+      </div>
+  
   );
 };
 
