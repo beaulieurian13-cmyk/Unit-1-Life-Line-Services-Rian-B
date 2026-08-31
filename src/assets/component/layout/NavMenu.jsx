@@ -21,7 +21,7 @@ const NavMenu = () => {
           </NavLink>
         </li>
 
-        {/* <li><Link ClassName="link" to =""></Link></li> */}
+        {/* <li><Link className="link" to =""></Link></li> */}
       </ul>
     </nav>
   );

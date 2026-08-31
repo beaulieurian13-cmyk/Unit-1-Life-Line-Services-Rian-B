@@ -1,10 +1,10 @@
-import Radio from "../ApplicantInput/type/Radio";
-import TextArea from "../ApplicantInput/type/TextArea";
+import Radio from "../form-structure/type/Radio";
+import TextArea from "../form-structure/type/TextArea";
 
 const ServiceDogReadiness = ({ formData, handleChange }) => {
   return (
     <div className="ServiceDogReadinessPage">
-      <h2>Service Dog Readiness</h2>
+      <h3>Service Dog Readiness</h3>
       <p>Please provide information about your service dog's readiness:</p>
 
       <fieldset>
@@ -81,33 +81,32 @@ const ServiceDogReadiness = ({ formData, handleChange }) => {
             value={formData.rulefollowing}
             handleChange={handleChange}
           />
-          </div>
-        </fieldset>
+        </div>
+      </fieldset>
 
-        <fieldset className="text-area">
-
-          <h3>Short Answer Questions</h3>
-          <TextArea
-            id="biggestChallenge"
-            label="What do you think will be the biggest challenge for you when caring for and working with a service dog?"
-            value={formData.biggestChallenge}
-            handleChange={handleChange}
-          />
-          <br></br>
-          <TextArea
-            id="succeccfulSupport"
-            label="What support do you think you will need to be successful with your service dog?"
-            value={formData.succeccfulSupport}
-            handleChange={handleChange}
-          />
-          <br></br>
-          <TextArea
-            id="receiveReady"
-            label="Why do you feel you are ready to receive a service dog at this point in your journey?"
-            value={formData.receiveReady}
-            handleChange={handleChange}
-          />
-          <br></br>        
+      <fieldset className="text-area">
+        <h3>Short Answer Questions</h3>
+        <TextArea
+          id="biggestChallenge"
+          label="What do you think will be the biggest challenge for you when caring for and working with a service dog?"
+          value={formData.biggestChallenge}
+          handleChange={handleChange}
+        />
+        <br></br>
+        <TextArea
+          id="succeccfulSupport"
+          label="What support do you think you will need to be successful with your service dog?"
+          value={formData.succeccfulSupport}
+          handleChange={handleChange}
+        />
+        <br></br>
+        <TextArea
+          id="receiveReady"
+          label="Why do you feel you are ready to receive a service dog at this point in your journey?"
+          value={formData.receiveReady}
+          handleChange={handleChange}
+        />
+        <br></br>
       </fieldset>
     </div>
   );

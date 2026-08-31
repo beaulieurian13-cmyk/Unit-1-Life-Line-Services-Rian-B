@@ -1,12 +1,16 @@
-import React from "react";
-import { useState } from "react";
 import { Link } from "react-router";
-
+// TODO: add 3 dog pictures
 const HomePage = () => {
   return (
     <div className="HomePage">
-      <h1>Our Story</h1>
+      <h2>Your Journey. Your Lifeline. Your Future.</h2>
+      <p>
+        Life after trauma can be difficult, but you don't have to face it alone.
+        Lifeline Service Dogs was created to help individuals with PTSD find
+        support through service dogs and a caring community.
+      </p>
 
+      <h3>We're here to help you take the next step.</h3>
       <section>
         <p>
           Lifeline Service Dogs was created with a simple belief: people deserve
