@@ -1,11 +1,10 @@
 import ApplicantInfo from "../component/application/pages/ApplicantInfo.jsx";
 import Button from "../component/application/form-structure/FormButton.jsx";
-//import application from "../component/application.css"
 import ServiceDogReadiness from "../component/application/pages/ServiceDogReadiness.jsx";
 import SupportNetwork from "../component/application/pages/SupportNetwork.jsx";
 import TherapistInfo from "../component/application/pages/TherapistInfo.jsx";
 import { useState } from "react";
-import InputErrorMessage from "../component/application/form-structure/InputErrorMessage.jsx";
+
 
 const blankFormData = {
   //applicantinfo
@@ -177,14 +176,15 @@ const getStepErrors = (step) => {
   const isLastStep = currentStep === 3;
 
   return (
-    <section className="ApplicationPage">
+    <section className="application-form">
       <h2>Application</h2>
       <form onSubmit={handleSubmit}>
         {currentStep === 0 && (
           <ApplicantInfo            
             formData={formData}
             handleChange={handleChange}
-            fieldErrors={fieldErrors}
+            fieldErrors={fieldErrors}   
+            
           />
         )}
         {currentStep === 1 && (
@@ -216,7 +216,9 @@ const getStepErrors = (step) => {
               label="Back"
               type="button"
               classes="buttons"
-              handleClick={() => setCurrentStep(currentStep - 1)}
+              handleClick={() => {
+                setFieldErrors({});
+                setCurrentStep(currentStep - 1)}}
             />
           )}
 

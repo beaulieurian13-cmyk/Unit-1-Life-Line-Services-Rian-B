@@ -33,7 +33,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="main">
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/about" element={<AboutPage

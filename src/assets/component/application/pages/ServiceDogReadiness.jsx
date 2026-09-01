@@ -1,16 +1,18 @@
 import InputErrorMessage from "../form-structure/InputErrorMessage";
+import FormSection from "../form-structure/styling/FormSection";
 import Radio from "../form-structure/type/Radio";
 import TextArea from "../form-structure/type/TextArea";
 
 const ServiceDogReadiness = ({ formData, handleChange, fieldErrors }) => {
   return (
-    <div className="ServiceDogReadinessPage">
-      <h3>Service Dog Readiness</h3>
+    <div className="service-dog-readiness">
+    <FormSection
+    classes="radio-group"
+    title="Service Dog Readiness">
+      
       <p>Please provide information about your service dog's readiness:</p>
-
-      <fieldset>
-        <div className="radio-group">
-          <Radio
+  
+           <Radio
             id="ownedDog"
             name="ownedDog"
             label="Have you ever owned or cared for a dog before?"
@@ -44,8 +46,8 @@ const ServiceDogReadiness = ({ formData, handleChange, fieldErrors }) => {
             value={formData.participateTraining}
             required
             handleChange={handleChange}
-          />
-          <InputErrorMessage 
+            />              
+           <InputErrorMessage 
            hasError={!!fieldErrors.participateTraining} 
            msg={fieldErrors.participateTraining}
            />
@@ -127,11 +129,12 @@ const ServiceDogReadiness = ({ formData, handleChange, fieldErrors }) => {
            hasError={!!fieldErrors.rulefollowing} 
            msg={fieldErrors.rulefollowing}
            />
-        </div>
-      </fieldset>
+        </FormSection>
 
-      <fieldset className="text-area">
-        <h4>Short Answer Questions</h4>
+      <FormSection
+      classes="text-area"
+      title="Short Answer Questions">
+        
         <TextArea
           id="biggestChallenge"
           label="What do you think will be the biggest challenge for you when caring for and working with a service dog?"
@@ -167,7 +170,7 @@ const ServiceDogReadiness = ({ formData, handleChange, fieldErrors }) => {
          hasError={!!fieldErrors.receiveReady} 
          msg={fieldErrors.receiveReady}
          />
-      </fieldset>
+      </FormSection>
     </div>
   );
 };

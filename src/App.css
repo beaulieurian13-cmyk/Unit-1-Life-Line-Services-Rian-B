@@ -1,3 +1,52 @@
-import layoout from "/component/layout/Layout.css" HomePage {
-  color: blueviolet;
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+   font-family: "Short Stack", cursive;
+  background-color: #782a09f1;
+}
+
+main {
+  background-color: #250566f1;
+  color:darkorange;
+  margin: 0 auto;
+  flex:1;
+}
+h1,
+h2,
+h3, 
+h4 {
+
+  font-family: 'Ranchers', sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  font-style: normal;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 45px;
+  color: rgb(191, 67, 6);
+}
+h2 {
+  font-size: 30px;
+  color:rgb(241, 233, 229);
+  align-items: center;
+  text-align: center;
+}
+
+
+
+

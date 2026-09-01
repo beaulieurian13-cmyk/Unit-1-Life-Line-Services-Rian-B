@@ -5,9 +5,10 @@ const Header = () => {
   return (
     <header className="Header">
       <NavMenu />
-      <h1>Life Line Services</h1>
-
-      <img src="/LifeLineServiceDog Logo.png" alt="Life Line Services Logo" />
+        <div className="header-branding">
+                <h1>Life Line Services</h1>
+                <img src="/LifeLIneIcon.png" alt="Life Line Services Logo" />
+            </div>
     </header>
   );
 };

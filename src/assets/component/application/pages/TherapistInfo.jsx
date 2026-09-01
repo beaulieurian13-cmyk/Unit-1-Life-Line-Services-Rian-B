@@ -1,12 +1,16 @@
 import InputErrorMessage from "../form-structure/InputErrorMessage";
+import FormSection from "../form-structure/styling/FormSection";
 import Input from "../form-structure/type/Input";
 import Radio from "../form-structure/type/Radio";
 import UploadFile from "../form-structure/UploadFile";
-// TODO: add required to the each inupt
+
 const TherapistInfo = ({ formData, handleChange, fileUpload, setFileUpload, fieldErrors }) => {
   return (
-    <div className="TherapistInfoPage">
-      <h3>Therapist Information</h3>
+    <FormSection
+     classes="TherapistInfoPage"
+     title="Therapist Information">
+
+      <h3>Therapist History</h3>
       <p>Please provide information about your therapist:</p>
 
       <fieldset className="radio-group">
@@ -15,8 +19,8 @@ const TherapistInfo = ({ formData, handleChange, fileUpload, setFileUpload, fiel
           name="hasTherapist"
           label="Have you been going consistently(2 or more time a month) to a trauma therapist for over a year?"
           options={["Yes", "No"]}
-          value={formData.hasTherapist}
-          required
+          value={formData.hasTherapist}  
+          required   
           handleChange={handleChange}
         />
         <InputErrorMessage
@@ -59,7 +63,7 @@ const TherapistInfo = ({ formData, handleChange, fileUpload, setFileUpload, fiel
         hasError={!!fieldErrors.therapistLetter}
         msg={fieldErrors.therapistLetter}
       />
-    </div>
+    </FormSection>
   );
 };
 

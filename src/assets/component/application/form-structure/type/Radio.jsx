@@ -5,6 +5,9 @@ const Radio = ({ id, label, name, options, value, required, handleChange }) => {
         {label}
         {required && "*"}
       </label>
+      <div className="radio-options">
+
+     
       {options.map((option) => (
         <div key={option}>
           <input
@@ -17,8 +20,9 @@ const Radio = ({ id, label, name, options, value, required, handleChange }) => {
             onChange={handleChange}
           />
           <label htmlFor={`${id}-${option}`}>{option}</label>
-        </div>
+        </div>         
       ))}
+      </div>
     </>
   );
 };

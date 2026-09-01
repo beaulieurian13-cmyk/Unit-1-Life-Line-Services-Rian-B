@@ -1,17 +1,25 @@
 import { Link } from "react-router";
-// TODO: add 3 dog pictures
+
 const HomePage = () => {
   return (
-    <div className="HomePage">
-      <h2>Your Journey. Your Lifeline. Your Future.</h2>
+    <div className="home-page">
+      <div className="home-page-title"> 
+        <h2>Your Journey. Your Lifeline. Your Future.</h2>
       <p>
         Life after trauma can be difficult, but you don't have to face it alone.
         Lifeline Service Dogs was created to help individuals with PTSD find
         support through service dogs and a caring community.
       </p>
-
+      </div>
+        <div className="home-page-pic-text">
+      
+      <div className="logo-pic">
+        <img src="/LifeLineServiceDog Logo.png" alt="Life Line Services Logo" />
+      </div>
+       
+      <div className="home-page-text">
       <h3>We're here to help you take the next step.</h3>
-      <section>
+     
         <p>
           Lifeline Service Dogs was created with a simple belief: people deserve
           the opportunity to reclaim their independence and build a life beyond
@@ -32,11 +40,12 @@ const HomePage = () => {
           while surrounding them with the education, training, and support
           needed to build a successful partnership. You have already come this
           far. Let your next step be toward a new beginning.
-        </p>
-      </section>
-
-      <Link to="/application">Application</Link>
-    </div>
+        </p> 
+        <Link to="/application">Application</Link>
+         </div>
+      </div>     
+ </div>
+       
   );
 };
 
