@@ -2,8 +2,8 @@ import { Link } from "react-router";
 
 const HomePage = () => {
   return (
-    <div className="HomePage">
-      <div className="HomePage-title"> 
+    <div className="home-page">
+      <div className="home-page-title"> 
         <h2>Your Journey. Your Lifeline. Your Future.</h2>
       <p>
         Life after trauma can be difficult, but you don't have to face it alone.
@@ -11,13 +11,13 @@ const HomePage = () => {
         support through service dogs and a caring community.
       </p>
       </div>
-        <div className="HomePage-text">
+        <div className="home-page-pic-text">
       
       <div className="logo-pic">
         <img src="/LifeLineServiceDog Logo.png" alt="Life Line Services Logo" />
       </div>
        
-      <div className="home-text">
+      <div className="home-page-text">
       <h3>We're here to help you take the next step.</h3>
      
         <p>
