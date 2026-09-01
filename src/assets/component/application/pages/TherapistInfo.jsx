@@ -10,7 +10,7 @@ const TherapistInfo = ({ formData, handleChange, fileUpload, setFileUpload, fiel
      classes="TherapistInfoPage"
      title="Therapist Information">
 
-      <h3>Therapist Information</h3>
+      <h3>Therapist History</h3>
       <p>Please provide information about your therapist:</p>
 
       <fieldset className="radio-group">
@@ -19,8 +19,8 @@ const TherapistInfo = ({ formData, handleChange, fileUpload, setFileUpload, fiel
           name="hasTherapist"
           label="Have you been going consistently(2 or more time a month) to a trauma therapist for over a year?"
           options={["Yes", "No"]}
-          value={formData.hasTherapist}
-          required
+          value={formData.hasTherapist}  
+          required   
           handleChange={handleChange}
         />
         <InputErrorMessage

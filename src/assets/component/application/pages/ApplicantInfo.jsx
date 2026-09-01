@@ -5,7 +5,7 @@ import Input from "../form-structure/type/Input";
 
 const ApplicantInfo = ({ formData, handleChange, fieldErrors }) => {
   return (
-    <div>
+    <div className="applicant-info">
       <h3>Applicant Information</h3>
 
       <FormSection

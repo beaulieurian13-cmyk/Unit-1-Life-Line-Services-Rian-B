@@ -5,7 +5,7 @@ import TextArea from "../form-structure/type/TextArea";
 
 const ServiceDogReadiness = ({ formData, handleChange, fieldErrors }) => {
   return (
-    <>
+    <div className="service-dog-readiness">
     <FormSection
     classes="radio-group"
     title="Service Dog Readiness">
@@ -171,7 +171,7 @@ const ServiceDogReadiness = ({ formData, handleChange, fieldErrors }) => {
          msg={fieldErrors.receiveReady}
          />
       </FormSection>
-    </>
+    </div>
   );
 };
 

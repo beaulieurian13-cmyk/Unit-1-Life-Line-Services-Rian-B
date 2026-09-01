@@ -1,13 +1,18 @@
 import InputErrorMessage from "../form-structure/InputErrorMessage";
 import Input from "../form-structure/type/Input";
 import Radio from "../form-structure/type/Radio";
+import FormSection from "../form-structure/styling/FormSection";
 
 const SupportNetwork = ({ formData, handleChange, fieldErrors }) => {
   return (
-    <div className="SupportNetworkPage">
-      <h3>Support Network</h3>
+    <>
+    
+    <FormSection
+      title="Support Network"
+      className="SupportNetworkPage">
+      
       <p>Please provide information about your support network:</p>
-      <fieldset>
+   
         <Radio
           id="liveWith"
           name="liveWith"
@@ -35,11 +40,14 @@ const SupportNetwork = ({ formData, handleChange, fieldErrors }) => {
           value={formData.stableLiving}
           required
           handleChange={handleChange}
-        />
+        /> 
         <InputErrorMessage
          hasError={!!fieldErrors.stableLiving} 
          msg={fieldErrors.stableLiving}
          />
+        </FormSection>
+        
+        <FormSection>       
         <Input
           id="emergencyName"
           label="Emergency Contact Name"
@@ -64,8 +72,9 @@ const SupportNetwork = ({ formData, handleChange, fieldErrors }) => {
          hasError={!!fieldErrors.emergencyPhone}
          msg={fieldErrors.emergencyPhone}
          />
-      </fieldset>
-    </div>
+     
+    </FormSection>
+    </>
   );
 };
 

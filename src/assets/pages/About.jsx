@@ -1,7 +1,7 @@
 import Button from "../component/application/form-structure/FormButton";
 import TextArea from "../component/application/form-structure/type/TextArea";
 
-// TODO: fix css by ul
+
 const AboutPage = ({question, currentQuestion, handleQuestionChange, handleAddQuestion, handleDeleteQuestion}) => {
   return (
     <div className="about-page">
@@ -36,12 +36,7 @@ const AboutPage = ({question, currentQuestion, handleQuestionChange, handleAddQu
         </p>
       </div>
 
-      {/* <section className="core-values">
-    <h2>Our Core Values</h2>
-    <ul className="core-values-list">
-        {/* the <li> items above */}
-      {/* </ul>
-</section> */}
+   
 
       <h2>Core Values</h2>
 
@@ -92,6 +87,7 @@ const AboutPage = ({question, currentQuestion, handleQuestionChange, handleAddQu
             forward with their lives.
           </p>
         </li>
+        
         <li>
           <h3>Respect</h3>
           <p>
