@@ -1,11 +1,12 @@
+import InputErrorMessage from "../form-structure/InputErrorMessage";
 import Input from "../form-structure/type/Input";
 import Radio from "../form-structure/type/Radio";
-// TODO: add required to the each inupt
-const SupportNetwork = ({ formData, handleChange }) => {
+
+const SupportNetwork = ({ formData, handleChange, fieldErrors }) => {
   return (
     <div className="SupportNetworkPage">
-      <h2>Support Network</h2>
-      <h3>Please provide information about your support network:</h3>
+      <h3>Support Network</h3>
+      <p>Please provide information about your support network:</p>
       <fieldset>
         <Radio
           id="liveWith"
@@ -19,30 +20,50 @@ const SupportNetwork = ({ formData, handleChange }) => {
             "other",
           ]}
           value={formData.liveWith}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage
+         hasError={!!fieldErrors.liveWith} 
+         msg={fieldErrors.liveWith}
+         />
         <Radio
           id="stableLiving"
           name="stableLiving"
           label="Is your current living situation stable and safe?"
           options={["Yes", "No", "I am not sure"]}
           value={formData.stableLiving}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage
+         hasError={!!fieldErrors.stableLiving} 
+         msg={fieldErrors.stableLiving}
+         />
         <Input
           id="emergencyName"
           label="Emergency Contact Name"
           type="text"
           value={formData.emergencyName}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage
+         hasError={!!fieldErrors.emergencyName}
+         msg={fieldErrors.emergencyName}
+         />
         <Input
           id="emergencyPhone"
           label="Emergency Contact Phone Number"
           type="tel"
           value={formData.emergencyPhone}
+          required
           handleChange={handleChange}
-        />
+        />       
+        <InputErrorMessage
+         hasError={!!fieldErrors.emergencyPhone}
+         msg={fieldErrors.emergencyPhone}
+         />
       </fieldset>
     </div>
   );

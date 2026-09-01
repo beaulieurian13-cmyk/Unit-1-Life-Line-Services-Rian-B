@@ -12,6 +12,7 @@ const Radio = ({ id, label, name, options, value, required, handleChange }) => {
             type="radio"
             name={name}
             value={option}
+            required={required}
             checked={value === option}
             onChange={handleChange}
           />

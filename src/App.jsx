@@ -6,6 +6,7 @@ import AboutPage from "./assets/pages/About.jsx";
 import Application from "./assets/pages/Application.jsx";
 import { Routes, Route, Navigate, NavLink } from "react-router";
 import "./App.css";
+import "./index.css";
 
 function App() {
   

@@ -8,7 +8,7 @@ const Input = ({ id, label, type, value, min, required, handleChange }) => {
       <input
         id={id}
         type={type || "text" || "tel" || "file"}
-
+        required={required}
         value={value}
         min={min}
         onChange={handleChange}

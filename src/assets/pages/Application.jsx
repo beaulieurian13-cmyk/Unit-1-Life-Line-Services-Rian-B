@@ -45,7 +45,7 @@ const blankFormData = {
   therapistName: "",
   therapistPhone: "",
 };
-// TODO: step fields and use it
+
 const stepFields = {
   0: [
     "firstName",
@@ -80,28 +80,67 @@ const stepFields = {
 
 const Application = () => {
   const [currentStep, setCurrentStep] = useState(0);
-
   const [formData, setFormData] = useState({ ...blankFormData });
+  const [fileUpload, setFileUpload] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState({});
 
-  const [hasErrors, setHasErrors] = useState(false);
+ 
 
-  const isValid = (step) => {
-    return stepFields[step].every((field) => {
-      const value = formData[field];
-      return typeof value === "string" ? value.trim() !== "" : true;
+  const isBlank = (value) => typeof value === "string" && value.trim() === "";
+
+  const isValidPhone = (value) => /^\d{3}-?\d{3}-?\d{4}$/.test(value.trim());
+
+  const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+
+  const isValidZip = (value) => /^\d{5}$/.test(value.trim());
+
+  const phoneFields = ["phone", "therapistPhone", "emergencyPhone"];
+  const shortAnswerFields = ["biggestChallenge", "succeccfulSupport", "receiveReady"];
+
+const getStepErrors = (step) => {
+    const errors = {};
+
+    stepFields[step].forEach((field) => {
+        const value = formData[field];
+
+        if (isBlank(value)) {
+            errors[field] = "This field is required";
+            return;
+        }
+
+        if (phoneFields.includes(field) && !isValidPhone(value)) {
+            errors[field] = "Please enter a valid phone number (e.g. 618-920-1742)";
+            return;
+        }
+
+        if (field === "email" && !isValidEmail(value)) {
+            errors[field] = "Please enter a valid email address";
+            return;
+        }
+
+        if (field === "zipCode" && !isValidZip(value)) {
+            errors[field] = "Please enter a valid 5-digit zip code";
+            return;
+        }
+
+        if (shortAnswerFields.includes(field)) {
+            const length = value.trim().length;
+            if (length < 50) {
+                errors[field] = `Please write at least 50 characters (currently ${length})`;
+            } else if (length > 500) {
+                errors[field] = `Please keep your answer under 500 characters (currently ${length})`;
+            }
+        }
     });
-  };
 
-  //TODO:finsih error set up
-  //TODO:fix isvalid by adding array for each page
-  // const isValid = () => {
-  //     return Object.keys(blankFormData).every((field) => {
-  //       const value = formData[field];
-  //       return typeof value === "string" ? value.trim() !== "" : true;
-  // });
-  // }
+    if (step === 3 && !fileUpload) {
+        errors.therapistLetter = "Please upload a letter from your therapist";
+    }
 
-  const handleChange = (event) => {
+    return errors;
+};
+
+ const handleChange = (event) => {
     const { id, name, value } = event.target;
     const key = name || id;
     setFormData((prevFormData) => ({
@@ -111,52 +150,65 @@ const Application = () => {
   };
 
   const handleNext = () => {
-    if (isValid(currentStep)) {
-      setHasErrors(false);
-      setCurrentStep(currentStep + 1);
-    } else {
-      setHasErrors(true);
-    }
-  };
+    const errors = getStepErrors(currentStep);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (isValid(currentStep)) {
-      setHasErrors(false);
-      setFormData(blankFormData);
+    if (Object.keys(errors).length === 0) {
+        setFieldErrors({});
+        setCurrentStep((prevStep) => prevStep + 1);
     } else {
-      setHasErrors(true);
+        setFieldErrors(errors);
     }
-  };
+};
+
+ const handleSubmit = (event) => {
+    event.preventDefault();
+    const errors = getStepErrors(currentStep);
+
+    if (Object.keys(errors).length === 0) {
+        setFieldErrors({});
+        setFormData(blankFormData);
+        setFileUpload(false);
+        setCurrentStep(0);
+    } else {
+        setFieldErrors(errors);
+    }
+};
 
   const isLastStep = currentStep === 3;
 
   return (
-    <main className="ApplicationPage">
+    <section className="ApplicationPage">
       <h2>Application</h2>
       <form onSubmit={handleSubmit}>
         {currentStep === 0 && (
-          <ApplicantInfo
-            setCurrentStep={setCurrentStep}
+          <ApplicantInfo            
             formData={formData}
             handleChange={handleChange}
+            fieldErrors={fieldErrors}
           />
         )}
         {currentStep === 1 && (
           <ServiceDogReadiness
             formData={formData}
             handleChange={handleChange}
+            fieldErrors={fieldErrors}
           />
         )}
         {currentStep === 2 && (
-          <SupportNetwork 
+          <SupportNetwork           
           formData={formData} 
-          handleChange={handleChange} />
+          handleChange={handleChange}
+          fieldErrors={fieldErrors}
+           />
         )}
         {currentStep === 3 && (
           <TherapistInfo 
           formData={formData} 
-          handleChange={handleChange} />
+          handleChange={handleChange}
+          fileUpload={fileUpload}
+          setFileUpload={setFileUpload}
+          fieldErrors={fieldErrors}
+           />
         )}
         <div className="button-container">
           {currentStep > 0 && (
@@ -183,13 +235,10 @@ const Application = () => {
               handleClick={handleNext}
             />
           )}
-          <InputErrorMessage
-            hasErrors={hasErrors}
-            msg="Please fill out all required fields before continuing."
-          />
+          
         </div>
       </form>
-    </main>
+    </section>
   );
 };
 

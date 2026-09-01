@@ -1,8 +1,8 @@
 import { useState } from "react";
 // import Button from "./FormButton";
 
-const UploadFile = ({ handleChange }) => {
-  const [fileUpload, setFileUpload] = useState(false);
+const UploadFile = ({ handleChange, fileUpload, setFileUpload }) => {
+  
 
   const handleFileChange = (event) => {
     handleChange(event);

@@ -1,6 +1,6 @@
 const Button = ({ id, type, label, classes, handleClick }) => {
   return (
-    <>
+    
       <button
         id={`${id}-button`}
         type={type}
@@ -9,8 +9,7 @@ const Button = ({ id, type, label, classes, handleClick }) => {
       >
         {label}
       </button>
-    </>
-    // TODO: add button to delete upload
+      
   );
 };
 

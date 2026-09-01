@@ -30,7 +30,7 @@ textarea {
   border-radius: 5px;
 }
 
-.error-message {
+error-message {
   color: red;
   font-size: 14px;
   margin-top: -10px;

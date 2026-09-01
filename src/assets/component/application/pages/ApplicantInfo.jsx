@@ -1,11 +1,12 @@
+import InputErrorMessage from "../form-structure/InputErrorMessage";
 import FormSection from "../form-structure/styling/FormSection";
 
 import Input from "../form-structure/type/Input";
-// TODO: 
-const ApplicantInfo = ({ formData, handleChange }) => {
+
+const ApplicantInfo = ({ formData, handleChange, fieldErrors }) => {
   return (
     <div>
-      <h2>Applicant Information</h2>
+      <h3>Applicant Information</h3>
 
       <FormSection
         title="Please fill out the following information:"
@@ -19,70 +20,102 @@ const ApplicantInfo = ({ formData, handleChange }) => {
           required={true}
           handleChange={handleChange}
         />
+        <InputErrorMessage 
+         hasError={!!fieldErrors.firstName} 
+         msg={fieldErrors.firstName}
+         />
+        
         <Input
           id="lastName"
           label="Last Name"
           type="text"
           value={formData.lastName}
-          required={true}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage 
+         hasError={!!fieldErrors.lastName} 
+         msg={fieldErrors.lastName}
+         />
         <Input
           id="preferredName"
           label="Preferred Name"
           type="text"
           value={formData.preferredName}
-          required={false}
           handleChange={handleChange}
         />
-        <Input
+         <Input
           id="phone"
           label="Phone Number"
-          type="number"
+          type="tel"
           value={formData.phone}
-          required={true}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage 
+         hasError={!!fieldErrors.phone} 
+         msg={fieldErrors.phone}
+         />
         <Input
           id="email"
           label="Email"
           type="email"
           value={formData.email}
-          required={true}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage 
+         hasError={!!fieldErrors.email} 
+         msg={fieldErrors.email}
+         />
         <Input
           id="address"
           label="Street Address"
           type="text"
           value={formData.address}
-          required={true}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage 
+         hasError={!!fieldErrors.address} 
+         msg={fieldErrors.address}
+         />
         <Input
           id="city"
           label="City"
           type="text"
           value={formData.city}
-          required={true}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage 
+         hasError={!!fieldErrors.city} 
+         msg={fieldErrors.city}
+         />
         <Input
           id="state"
           label="State"
           type="text"
           value={formData.state}
-          required={true}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage 
+         hasError={!!fieldErrors.state} 
+         msg={fieldErrors.state}
+         />
         <Input
           id="zipCode"
           label="Zip Code"
           type="text"
           value={formData.zipCode}
-          required={true}
+          required
           handleChange={handleChange}
         />
+        <InputErrorMessage 
+         hasError={!!fieldErrors.zipCode} 
+         msg={fieldErrors.zipCode}
+         />
       </FormSection>
     </div>
   );
