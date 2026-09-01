@@ -1,7 +1,7 @@
 import FormSection from "../form-structure/styling/FormSection";
 
 import Input from "../form-structure/type/Input";
-
+// TODO: 
 const ApplicantInfo = ({ formData, handleChange }) => {
   return (
     <div>

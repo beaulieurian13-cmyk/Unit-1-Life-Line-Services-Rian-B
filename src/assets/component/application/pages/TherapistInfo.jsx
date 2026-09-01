@@ -1,7 +1,7 @@
 import Input from "../form-structure/type/Input";
 import Radio from "../form-structure/type/Radio";
 import UploadFile from "../form-structure/UploadFile";
-
+// TODO: add required to the each inupt
 const TherapistInfo = ({ formData, handleChange }) => {
   return (
     <div className="TherapistInfoPage">

@@ -1,6 +1,6 @@
 import Input from "../form-structure/type/Input";
 import Radio from "../form-structure/type/Radio";
-
+// TODO: add required to the each inupt
 const SupportNetwork = ({ formData, handleChange }) => {
   return (
     <div className="SupportNetworkPage">

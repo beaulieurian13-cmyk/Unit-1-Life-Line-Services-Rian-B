@@ -1,6 +1,6 @@
 import Radio from "../form-structure/type/Radio";
 import TextArea from "../form-structure/type/TextArea";
-
+// TODO: add required to the each inupt
 const ServiceDogReadiness = ({ formData, handleChange }) => {
   return (
     <div className="ServiceDogReadinessPage">

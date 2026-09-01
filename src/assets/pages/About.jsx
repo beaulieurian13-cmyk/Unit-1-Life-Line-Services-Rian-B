@@ -1,6 +1,8 @@
-// TODO: add unorderlist of core values
+import Button from "../component/application/form-structure/FormButton";
+import TextArea from "../component/application/form-structure/type/TextArea";
 
-const AboutPage = () => {
+// TODO: fix css by ul
+const AboutPage = ({question, currentQuestion, handleQuestionChange, handleAddQuestion, handleDeleteQuestion}) => {
   return (
     <div className="about-page">
       <h2>My Story</h2>
@@ -34,7 +36,14 @@ const AboutPage = () => {
         </p>
       </div>
 
-      <h3>Core Values</h3>
+      {/* <section className="core-values">
+    <h2>Our Core Values</h2>
+    <ul className="core-values-list">
+        {/* the <li> items above */}
+      {/* </ul>
+</section> */}
+
+      <h2>Core Values</h2>
 
       <ul className="core-values">
         <li>
@@ -92,7 +101,44 @@ const AboutPage = () => {
           </p>
         </li>
       </ul>
+<section className="question-section">
+    <h2>Ask Any Questions You May Have</h2>
+    <div className="queston-input-side">
+        <TextArea
+        id="questionInput"
+        label="Question:"
+        value={currentQuestion}
+        handleChange={handleQuestionChange}
+        />
+        <Button
+        id="submit"
+        label="Submit"
+        classes="button"
+        handleClick={handleAddQuestion}
+        />          
     </div>
+    <div className="question-list-side">
+        <ul>
+            {question.map((question) => (
+                <li key={question.id}>
+                    {question.text}
+                    <Button
+                    id="delete"
+                    label="Delete"
+                    type="button"
+                    classes="button"
+                    handleClick={() =>handleDeleteQuestion(question.id)}
+                    />
+                </li>
+            ))}
+        </ul>
+
+    </div>
+
+</section>
+
+    </div>
+
   );
 };
 

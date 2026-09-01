@@ -149,10 +149,14 @@ const Application = () => {
           />
         )}
         {currentStep === 2 && (
-          <SupportNetwork formData={formData} handleChange={handleChange} />
+          <SupportNetwork 
+          formData={formData} 
+          handleChange={handleChange} />
         )}
         {currentStep === 3 && (
-          <TherapistInfo formData={formData} handleChange={handleChange} />
+          <TherapistInfo 
+          formData={formData} 
+          handleChange={handleChange} />
         )}
         <div className="button-container">
           {currentStep > 0 && (
