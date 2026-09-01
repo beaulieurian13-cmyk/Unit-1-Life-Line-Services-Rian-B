@@ -1,11 +1,15 @@
 import InputErrorMessage from "../form-structure/InputErrorMessage";
+import FormSection from "../form-structure/styling/FormSection";
 import Input from "../form-structure/type/Input";
 import Radio from "../form-structure/type/Radio";
 import UploadFile from "../form-structure/UploadFile";
-// TODO: add required to the each inupt
+
 const TherapistInfo = ({ formData, handleChange, fileUpload, setFileUpload, fieldErrors }) => {
   return (
-    <div className="TherapistInfoPage">
+    <FormSection
+     classes="TherapistInfoPage"
+     title="Therapist Information">
+
       <h3>Therapist Information</h3>
       <p>Please provide information about your therapist:</p>
 
@@ -59,7 +63,7 @@ const TherapistInfo = ({ formData, handleChange, fileUpload, setFileUpload, fiel
         hasError={!!fieldErrors.therapistLetter}
         msg={fieldErrors.therapistLetter}
       />
-    </div>
+    </FormSection>
   );
 };
 

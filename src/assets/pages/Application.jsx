@@ -185,6 +185,7 @@ const getStepErrors = (step) => {
             formData={formData}
             handleChange={handleChange}
             fieldErrors={fieldErrors}
+            
           />
         )}
         {currentStep === 1 && (

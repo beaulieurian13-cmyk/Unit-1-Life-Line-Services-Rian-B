@@ -1,4 +1,10 @@
-/         {/* <section className="about-values">  */}
+font-family: 'Fontdiner Swanky', cursive;
+font-family: 'Ranchers', sans-serif;
+font-family: 'Short Stack', cursive;
+
+
+
+//         {/* <section className="about-values">  */}
 //                 {/* <form>
 //                     <ul>
 //                     <li>

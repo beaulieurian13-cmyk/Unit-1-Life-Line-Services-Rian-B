@@ -31,7 +31,7 @@ textarea {
 }
 
 error-message {
-  color: red;
+  color: rgb(219, 198, 198);
   font-size: 14px;
   margin-top: -10px;
   margin-bottom: 10px;
@@ -39,9 +39,11 @@ error-message {
 
 button {
   padding: 10px 20px;
-  background-color: #e7750a;
+  background-color: #450ae7;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  Align-items: center;
+  text-align: center;
 }
