@@ -1,10 +1,13 @@
 {
-  "name": "unit-1-life-line-services-rian-b",
+  "name": "Unit-1-Life-Line-Services-Rian-B",
+  "homepage": "https://beaulieurian13-cmyk.github.io/Unit-1-Life-Line-Services-Rian-B",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -19,9 +22,10 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
-    "eslint": "^8.57.1",
+    "eslint": "^10.9.1",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
+    "gh-pages": "^6.3.0",
     "globals": "^17.7.0",
     "prettier": "^3.9.6",
     "vite": "^8.2.0"

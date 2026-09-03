@@ -14,7 +14,7 @@ const HomePage = () => {
         <div className="home-page-pic-text">
       
       <div className="logo-pic">
-        <img src="/LifeLineServiceDog Logo.png" alt="Life Line Services Logo" />
+        <img src={`${import.meta.env.BASE_URL}LifeLineServiceDogLogo.png`} alt="Life Line Services Logo" />
       </div>
        
       <div className="home-page-text">

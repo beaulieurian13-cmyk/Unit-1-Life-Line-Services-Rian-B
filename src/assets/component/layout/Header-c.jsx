@@ -7,7 +7,7 @@ const Header = () => {
       <NavMenu />
         <div className="header-branding">
                 <h1>Life Line Services</h1>
-                <img src="/LifeLIneIcon.png" alt="Life Line Services Logo" />
+                <img src={`${import.meta.env.BASE_URL}LifeLineIcon.png`} alt="Life Line Services Logo" />
             </div>
     </header>
   );
