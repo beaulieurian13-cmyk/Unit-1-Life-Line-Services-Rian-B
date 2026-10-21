@@ -8,9 +8,8 @@ const TherapistInfo = ({ formData, handleChange, fileUpload, setFileUpload, fiel
   return (
     <FormSection
      classes="TherapistInfoPage"
-     title="Therapist Information">
+     title="Therapist History">
 
-      <h3>Therapist History</h3>
       <p>Please provide information about your therapist:</p>
 
       <fieldset className="radio-group">

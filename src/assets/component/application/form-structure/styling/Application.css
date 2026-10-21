@@ -32,8 +32,7 @@
 }
 
 label {
-  font-weight: bold;
-  align-items: center;
+  font-weight: bold; ;
   text-align: center;
   margin-bottom: 5px;
 }
@@ -91,7 +90,7 @@ textarea {
 }
 
 .error-message {
-  color: rgb(219, 198, 198);
+  color: rgb(236, 181, 148);
   font-size: 14px;
   margin-top: 4px;
   margin-bottom: 10px;
@@ -122,3 +121,204 @@ button {
   align-items: center;
   text-align: center;
 }
+
+/* .application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.applicant-info,
+.service-dog-readiness {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font: inherit;
+  color: #1a1a1a;
+  background: #faf7f5;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(191, 98, 17, 0.35);
+}
+textarea { min-height: 120px; resize: vertical; }
+
+/* Radio pills */
+/* .radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 4px 0 16px;
+}
+.radio-options input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.radio-options label {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 18px;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent-text);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+.radio-options input[type="radio"]:hover + label { background: rgba(191, 98, 17, 0.18); }
+.radio-options input[type="radio"]:checked + label { background: var(--accent); color: #fff; }
+.radio-options input[type="radio"]:focus-visible + label { outline: 3px solid rgba(240, 160, 96, 0.6); outline-offset: 2px; }
+
+.error-message {
+  color: var(--error);
+  font-size: 14px;
+  margin: -8px 0 12px;
+  animation: slideDown 0.15s ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+button {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 24px;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+button:hover { background: #5a2bf0; }
+button:active { transform: translateY(1px); }
+button:focus-visible { outline: 3px solid rgba(240, 160, 96, 0.6); outline-offset: 2px; }
+
+@media (min-width: 640px) {
+  .applicant-info, .service-dog-readiness { padding: 32px; }
+  button { width: auto; }
+} */ 
+
+/* .application-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.applicant-info,
+.service-dog-readiness {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #250566f1;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.radio-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.radio-options input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-options label {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #bf6211;
+  border-radius: 6px;
+  color: #bf6211;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.radio-options input[type="radio"]:checked + label {
+  background-color: #bf6211;
+  color: #ffffff;
+}
+
+.radio-options input[type="radio"]:hover + label {
+  background-color: rgba(191, 98, 17, 0.15);
+}
+
+.error-message {
+  color: rgb(236, 181, 148);
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  animation: slideDown 0.15s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #450ae7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */

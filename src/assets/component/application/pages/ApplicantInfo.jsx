@@ -6,12 +6,14 @@ import Input from "../form-structure/type/Input";
 const ApplicantInfo = ({ formData, handleChange, fieldErrors }) => {
   return (
     <div className="applicant-info">
-      <h3>Applicant Information</h3>
+      
 
       <FormSection
-        title="Please fill out the following information:"
+        title= "Applicant Information"
         classes="input"
-      >
+        >
+        <p>Please fill out the following information: </p>
+        
         <Input
           id="firstName"
           label="First Name"

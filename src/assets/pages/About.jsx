@@ -8,7 +8,7 @@ const AboutPage = ({question, currentQuestion, handleQuestionChange, handleAddQu
       <h2>My Story</h2>
       <div className="about-story">
         <p>
-          Lifeline Services was created from a deeply personal experience. I
+          Lotus Wolf Foundations was created from a deeply personal experience. I
           know firsthand what it is like to live with PTSD and how much it can
           affect your everyday life. There were times when having a trained
           service dog could have made my life easier—helping me feel safer, more
@@ -24,19 +24,19 @@ const AboutPage = ({question, currentQuestion, handleQuestionChange, handleAddQu
           feel like they have to face that struggle alone.
         </p>
         <p>
-          That is why I created Lifeline Services. My goal is to help make
+          That is why I created Lotus Wolf Foundations. My goal is to help make
           trained service dogs more accessible to people who truly need them and
           to provide support throughout the journey—not just when someone
           receives their dog, but as they learn, grow, and build a life
           together. A service dog is more than a trained animal. For the right
           person, they can become a source of independence, confidence,
-          stability, and hope. Lifeline Services exists because I believe
+          stability, and hope. Lotus Wolf Foundations exists because I believe
           everyone who genuinely needs that lifeline deserves the opportunity to
           have one.
         </p>
       </div>
 
-   
+   // TODO: add two more core values
 
       <h2>Core Values</h2>
 
@@ -51,7 +51,7 @@ const AboutPage = ({question, currentQuestion, handleQuestionChange, handleAddQu
         <li>
           <h3>Helping Others</h3>
           <p>
-            At the heart of Lifeline Services is the desire to make a meaningful
+            At the heart of Lotus Wolf Foundations is the desire to make a meaningful
             difference in people's lives and remind them that they do not have
             to face everything alone.
           </p>

@@ -6,8 +6,8 @@ const Header = () => {
     <header className="Header">
       <NavMenu />
         <div className="header-branding">
-                <h1>Life Line Services</h1>
-                <img src={`${import.meta.env.BASE_URL}LifeLineServicesIcon.png`} alt="Life Line Services Logo" />
+                <h1>Lotus Wolf Foundation</h1>
+                <img src={`${import.meta.env.BASE_URL}LotusWolfFoundationIcon.png`} alt="Lotus Wolf Foundation Icon" />
             </div>
     </header>
   );
